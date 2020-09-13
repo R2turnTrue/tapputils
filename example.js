@@ -1,6 +1,6 @@
 const tapp = require('./tapputils')
 
-tapp.checkMojangSession('johanbag290@gmail.com', 'min76081205', (e, i, d) => {
+tapp.checkMojangSession('johanbag290@gmail.com', process.env.MINECRAFT_PASSWORD, (e, i, d) => {
     if(e !== undefined) {
         console.error(e)
         return
