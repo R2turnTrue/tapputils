@@ -1,7 +1,7 @@
 {
   "name": "tapp_utils",
   "version": "1.0.0",
-  "description": "TappUtils for Node.JS (and Minecraft)",
+  "description": "TappUtils for Node.JS VELauncher",
   "main": "tapputils.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
