@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/NamuTree0345/tapputils#readme",
   "dependencies": {
+    "md5": "^2.3.0",
     "request": "^2.88.2"
   }
 }
