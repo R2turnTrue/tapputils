@@ -1,0 +1,27 @@
+{
+  "name": "tapp_utils",
+  "version": "1.0.0",
+  "description": "TappUtils for Node.JS (and Minecraft)",
+  "main": "tapputils.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NamuTree0345/tapputils.git"
+  },
+  "keywords": [
+    "nodejs",
+    "util",
+    "tapp"
+  ],
+  "author": "NamuTree0345 (redwikitv@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NamuTree0345/tapputils/issues"
+  },
+  "homepage": "https://github.com/NamuTree0345/tapputils#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
