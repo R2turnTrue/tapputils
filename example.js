@@ -17,4 +17,7 @@ tapp.checkMojangSession('johanbag290@gmail.com', 'min76081205', (e, i, d) => {
     }
 
     console.log('idk')
+
+    await tapp.downloadFile('sdfasdvs', 'fadvssf')
+    await tapp.checkSumMatch('vjsvksjvsad', 'sjvdj2rf2r9d').then()
 })

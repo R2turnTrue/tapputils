@@ -1,7 +1,7 @@
 const request = require('request')
-const http = require('http');
-const fs = require('fs');
-const crypto = require('crypto')
+const http = require('http')
+const fs = require('fs')
+const md5 = require('md5')
 
 /**
  * Check token is vaild; callback: callback(error: Error, isVaild: Boolean, description: String)
@@ -39,11 +39,11 @@ module.exports.checkMojangSession = (usernameOrEmail, password, callback) => {
  * @param {String} address
  * @param {String} path
  */
-module.exports.downloadFile = (address, path) => {
-    const file = fs.createWriteStream(path);
-    const request = http.get(address, function(response) {
-        response.pipe(file);
-    });
+module.exports.downloadFile = async (address, path) => {
+    const file = fs.createWriteStream(path)
+    const request = http.get(address, function (response) {
+        response.pipe(file)
+    })
 }
 
 
@@ -53,8 +53,6 @@ module.exports.downloadFile = (address, path) => {
  * @param {String} sum 
  * @returns {Boolean} Returns File's sum and Sum is matching
  */
-module.exports.checkSumMatch = (file, sum) => {
-    return crypto
-        .createHash('md5')
-        .update()
+module.exports.checkSumMatch = async (file, sum) => {
+    return md5(fs.readFileSync(file)) == sum    
 }
