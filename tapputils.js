@@ -39,9 +39,9 @@ module.exports.checkMojangSession = (usernameOrEmail, password, callback) => {
  * @param {String} address
  * @param {String} path
  */
-module.exports.downloadFile = async (address, path) => {
+module.exports.downloadFile = async function (address, path) {
     const file = fs.createWriteStream(path)
-    const request = http.get(address, function (response) {
+    http.get(address, function (response) {
         response.pipe(file)
     })
 }
@@ -53,6 +53,4 @@ module.exports.downloadFile = async (address, path) => {
  * @param {String} sum 
  * @returns {Boolean} Returns File's sum and Sum is matching
  */
-module.exports.checkSumMatch = async (file, sum) => {
-    return md5(fs.readFileSync(file)) == sum    
-}
+module.exports.checkSumMatch = async (file, sum) => md5(fs.readFileSync(file)) == sum

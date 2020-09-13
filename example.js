@@ -18,6 +18,6 @@ tapp.checkMojangSession('johanbag290@gmail.com', process.env.MINECRAFT_PASSWORD,
 
     console.log('idk')
 
-    await tapp.downloadFile('sdfasdvs', 'fadvssf')
-    await tapp.checkSumMatch('vjsvksjvsad', 'sjvdj2rf2r9d').then()
+    tapp.downloadFile('https://www.learningcontainer.com/bfd_download/sample-text-file/', 'HELLO.txt')
+    console.log(tapp.checkSumMatch('HELLO.txt', 'A50ABFA4C1936B1AD71C0331F3808562'))
 })
